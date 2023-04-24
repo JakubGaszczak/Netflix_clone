@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+body {
+    font-family: $body-font;
+    background-color: $background-color;
+    color: $font-color;
+}
+
+input {
+    font-size: $font-size-small;
+}
+
+
+ul {
+    list-style: none;
+    font-size: $font-size-small;
+}
+
+li {
+    color: $font-color;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: $font-size-big;
+}
+
+.flex {
+    display: flex;
+    
+    &--center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.button {
+    padding: .6rem 1.5rem;
+    border-radius: .2rem;
+    font-weight: $font-600;
+    border: none;
+    cursor: pointer;
+
+    &--login {
+        background-color: red;
+        color: white;
+    }
+}

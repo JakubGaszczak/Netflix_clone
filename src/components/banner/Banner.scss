@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.banner {
+    padding-top: 16rem;
+    height: 100vh;
+
+    &__title {
+        font-size: $font-size-title;   
+        max-width: 45rem;
+    }
+
+    &__description {
+        max-width: 35em;
+        font-weight: $font-600;
+        margin-bottom: 2rem;
+    }
+
+    &__btns {
+        display: flex;
+        
+        &-informations {
+            margin-left: .8rem;
+            
+            color: white;
+            background-color: rgb(114, 114, 114);
+        }
+
+        button {
+            font-size: $font-size-normall;
+        }
+    }
+
+    &__icons {
+        margin-right: .5rem;
+        font-size: 2rem;
+    }
+}
+

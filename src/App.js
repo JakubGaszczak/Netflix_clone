@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/App.css";
+
+import Banner from "./components/banner/Banner";
+import Header from "./components/header/Header";
+import LoginRegister from "./components/loginRegister/LoginRegister";
+
+import requests from './API/request'
+import MovieRow from "./components/movieRow/MovieRow";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+
+        {/* <LoginRegister /> */}
+
+        <Header />
+        <main>
+          <Banner />
+
+          <MovieRow title="Trending Now" fetchUrl={requests.fetchTrending} />
+          <MovieRow title="Top Rated" fetchUrl={requests.fetchTopRated} />
+          <MovieRow title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+          <MovieRow title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+          <MovieRow title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+          <MovieRow title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+          <MovieRow title="Documentaries" fetchUrl={requests.fetchDocumentariesMovies} />
+        </main>
+
     </div>
   );
 }

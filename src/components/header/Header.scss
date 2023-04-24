@@ -1,0 +1,139 @@
+@import "../../styles/variables.scss";
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding-top: 0;
+
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(255, 255, 255, 0));
+
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.header__leftSide {
+
+    .header__logo {
+        width: 8rem;
+        cursor: pointer;
+    }
+
+    .header__list {
+        li {
+            margin: 0 1rem;
+
+            &:first-child {
+                font-weight: $font-600;
+            }
+        }
+    }
+
+    .header__mobile-toggle {
+        position: relative;
+        display: none;
+        margin: 0 1rem;
+
+        font-size: $font-size-small;
+        color: white;
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+        }
+    }
+
+    .header__mobile-list {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 5rem;
+        left: 3.7rem;
+    
+        padding: 0 5.5rem;
+        background: rgb(0, 0, 0, .9);
+        border-top: .125rem solid white;
+        text-align: center;
+    
+        li {
+            margin: 1.5rem 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            left: 1.7rem;
+            padding: 0 3rem;
+
+            li {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+.header__rightSide {
+
+    .header__search {
+        position: relative;
+
+        .header__searchbar {
+            margin: 0 1rem;
+            font-size: 1.7rem;
+    
+            color: white;
+            cursor: pointer;
+        }
+    
+        .header__input {
+            position: absolute;
+            right: 3rem;
+            width: 18rem;
+            padding: .3rem 1rem;
+    
+            border: 0.0625rem solid white;
+            background: rgb(0, 0, 0, .9);
+            color: white;
+            transition: .5s ease-in-out;
+
+            z-index: 999;
+
+            &::placeholder {
+                color: white;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 12rem;
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 8rem;
+            }
+        }
+    }
+
+    .header__avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        border-radius: .3rem;
+        cursor: pointer;
+    }
+}
+
+/* hide serachbar */
+
+.hideInput {
+    width: 0;
+    border: 0;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+/* show mobile nav */
+
+.show__mobile-nav {
+    display: block;
+}
+
+
+

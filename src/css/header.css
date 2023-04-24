@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+.header {
+  position: fixed;
+  width: 100%;
+  padding-top: 0;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+}
+.header .header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__leftSide .header__logo {
+  width: 8rem;
+  cursor: pointer;
+}
+.header__leftSide .header__list li {
+  margin: 0 1rem;
+}
+.header__leftSide .header__list li:first-child {
+  font-weight: 600;
+}
+.header__leftSide .header__mobile-toggle {
+  position: relative;
+  display: none;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  color: white;
+}
+@media screen and (max-width: 1200px) {
+  .header__leftSide .header__mobile-toggle {
+    display: block;
+  }
+}
+.header__leftSide .header__mobile-list {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 5rem;
+  left: 3.7rem;
+  padding: 0 5.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 0.125rem solid white;
+  text-align: center;
+}
+.header__leftSide .header__mobile-list li {
+  margin: 1.5rem 0;
+}
+@media screen and (max-width: 576px) {
+  .header__leftSide .header__mobile-list {
+    left: 1.7rem;
+    padding: 0 3rem;
+  }
+  .header__leftSide .header__mobile-list li {
+    margin: 1rem 0;
+  }
+}
+
+.header__rightSide .header__search {
+  position: relative;
+}
+.header__rightSide .header__search .header__searchbar {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: white;
+  cursor: pointer;
+}
+.header__rightSide .header__search .header__input {
+  position: absolute;
+  right: 3rem;
+  width: 18rem;
+  padding: 0.3rem 1rem;
+  border: 0.0625rem solid white;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  transition: 0.5s ease-in-out;
+  z-index: 999;
+}
+.header__rightSide .header__search .header__input::-moz-placeholder {
+  color: white;
+}
+.header__rightSide .header__search .header__input::placeholder {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .header__rightSide .header__search .header__input {
+    width: 12rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__rightSide .header__search .header__input {
+    width: 8rem;
+  }
+}
+.header__rightSide .header__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/* hide serachbar */
+.hideInput {
+  width: 0;
+  border: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+/* show mobile nav */
+.show__mobile-nav {
+  display: block;
+}/*# sourceMappingURL=Header.css.map */

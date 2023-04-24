@@ -1,0 +1,10 @@
+.loginregister__header {
+  justify-content: space-between;
+  align-items: center;
+}
+.loginregister__header .loginregister__logo {
+  width: 9rem;
+}
+.loginregister__header .loginregister__button-login {
+  background-color: red;
+}/*# sourceMappingURL=LoginRegister.css.map */
