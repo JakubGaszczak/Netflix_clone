@@ -19,7 +19,7 @@ function MovieRow({ fetchUrl, title }) {
     console.log(movies)
 
   return (
-    <div className='movieRow'>
+    <div className='movieRow section--rows'>
         <h3 className='movieRow__title'>{title}</h3>
         <div className='movieRow__row'>
             {movies.map((movie, key) => (

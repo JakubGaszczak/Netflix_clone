@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__socials {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    svg {
+        margin: 0 .8rem;
+        cursor: pointer;
+
+        &:hover {
+            scale: 105%;
+        }
+    }
+
+    &__links-list {
+        max-width: 50rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        grid-template-rows: repeat(3, 1fr); 
+        gap: 10px;
+    }
+}

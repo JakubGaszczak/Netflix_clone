@@ -10,7 +10,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: black;
+  background-color: rgb(10, 10, 10);
   color: white;
 }
 
@@ -27,6 +27,9 @@ li {
   color: white;
   cursor: pointer;
 }
+li:hover {
+  scale: 105%;
+}
 
 h1 {
   font-size: 2.5rem;
@@ -39,6 +42,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.grid {
+  display: grid;
 }
 
 .button {
@@ -57,11 +64,19 @@ h1 {
   padding: 3rem 3.5rem;
 }
 .section--header {
-  padding: 1rem 3rem;
+  padding: 0rem 3rem;
 }
 @media screen and (max-width: 768px) {
   .section--header {
     padding: 0 1rem;
+  }
+}
+.section--rows {
+  padding: 1.3rem 3rem;
+}
+@media screen and (max-width: 768px) {
+  .section--rows {
+    padding: 1rem;
   }
 }
 
@@ -178,6 +193,11 @@ h1 {
   display: block;
 }
 
+/* black header on scroll */
+.header__black {
+  background-color: black;
+}
+
 .banner {
   padding-top: 16rem;
   height: 100vh;
@@ -207,11 +227,39 @@ h1 {
   font-size: 2rem;
 }
 
+.movieRow__title {
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
 .movieRow__row {
   display: flex;
 }
 
 .moviePoster__img {
+  margin: 0 0.3rem;
   max-width: 18rem;
   border-radius: 0.3rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__socials {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.footer svg {
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+.footer svg:hover {
+  scale: 105%;
+}
+.footer__links-list {
+  max-width: 50rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
 }/*# sourceMappingURL=App.css.map */

@@ -6,6 +6,7 @@ import LoginRegister from "./components/loginRegister/LoginRegister";
 
 import requests from './API/request'
 import MovieRow from "./components/movieRow/MovieRow";
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <MovieRow title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
           <MovieRow title="Documentaries" fetchUrl={requests.fetchDocumentariesMovies} />
         </main>
+        <Footer />
 
     </div>
   );

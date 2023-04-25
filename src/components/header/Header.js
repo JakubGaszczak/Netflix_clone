@@ -13,6 +13,7 @@ function Header() {
     const [showInput, setShowInput] = useState(false)
     const [showNav, setShowNav] = useState(false)
     const [toggleResize, setTogleResize] = useState(false)
+    const [isScrolling, setIsScrolling] = useState(false)
 
     const handleResize = () => {
 
@@ -33,8 +34,21 @@ function Header() {
         }
     })
 
+
+    const handleScroll = () => {
+        const scrollTop = window.pageYOffset
+
+        if (scrollTop > 50) {
+            setIsScrolling(true)
+        } else {
+            setIsScrolling(false)
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
   return (
-    <header className='section--header header' id='header'>
+    <header className={isScrolling ? "section--header header header__black" : "section--header header"} id='header'>
 
         <nav className='header__nav flex'>
             <div className='header__leftSide flex--center'>

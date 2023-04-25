@@ -110,4 +110,9 @@
 /* show mobile nav */
 .show__mobile-nav {
   display: block;
+}
+
+/* black header on scroll */
+.header__black {
+  background-color: black;
 }/*# sourceMappingURL=Header.css.map */

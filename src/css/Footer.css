@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__socials {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.footer svg {
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+.footer svg:hover {
+  scale: 105%;
+}
+.footer__links-list {
+  max-width: 50rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,6 +1,12 @@
 .movieRow {
     
+    &__title {
+        margin-bottom: 1rem;
+        margin-left: .5rem;
+    }
+
     &__row {
         display: flex;
     }
+
 }
