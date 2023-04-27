@@ -1,5 +1,6 @@
 .movieRow {
-    
+    width: 100%;
+
     &__title {
         margin-bottom: 1rem;
         margin-left: .5rem;
@@ -7,6 +8,40 @@
 
     &__row {
         display: flex;
+        width: max-content;
+        overflow-y: hidden;
+        overflow-x: scroll;
+
+        transition: all 1s ease;
+        transform: translateX(0);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3rem;
+        height: 100%;
+        
+        background-color: rgb(22, 22, 22, .5);
+        cursor: pointer;
+        z-index: 999;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            right: 0;
+        }
     }
 
 }

@@ -1,5 +1,11 @@
 .moviePoster__img {
   margin: 0 0.3rem;
   max-width: 18rem;
+  width: 100%;
   border-radius: 0.3rem;
+  cursor: pointer;
+}
+.moviePoster__img:hover {
+  scale: 107%;
+  transition: transform 450ms;
 }/*# sourceMappingURL=MoviePoster.css.map */

@@ -15,17 +15,29 @@ function Footer() {
         </div>
 
         <div className='footer__links'>
-            <ul className='footer__links-list grid'>
-                <li>Centrum pomocy</li>
-                <li>Praca</li>
-                <li>Ustawienia plików cookie</li>
-                <li>Karty podarunkowe</li>
-                <li>Warunki korzystania</li>
-                <li>Informacje o firmie</li>
-                <li>Media Center</li>
-                <li>Prywatność</li>
-                <li>Skontaktuj się z nami</li>
-            </ul>
+          <div className='footer__links-row'>
+            <p>Audiodeskrypcja</p>
+            <p>Relacje z inwestorami</p>
+            <p>Informacje prawne</p>
+          </div>
+
+          <div className='footer__links-row'>
+            <p>Centrum pomocy</p>
+            <p>Praca</p>
+            <p>Ustawienia plików cookie</p>
+          </div>
+
+          <div className='footer__links-row'>
+            <p>Karty podarunkowe</p>
+            <p>Warunki korzystania</p>
+            <p>Informacje o firmie</p>
+          </div>
+
+          <div className='footer__links-row'>
+            <p>Media Center</p>
+            <p>Prywatność</p>
+            <p>Skontaktuj się z nami</p>
+          </div>   
         </div>
     </footer>
   )

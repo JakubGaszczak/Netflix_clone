@@ -227,18 +227,55 @@ h1 {
   font-size: 2rem;
 }
 
+.movieRow {
+  width: 100%;
+}
 .movieRow__title {
   margin-bottom: 1rem;
   margin-left: 0.5rem;
 }
 .movieRow__row {
   display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  transition: all 1s ease;
+  transform: translateX(0);
+}
+.movieRow__row::-webkit-scrollbar {
+  display: none;
+}
+.movieRow__wrapper {
+  position: relative;
+}
+.movieRow__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.5);
+  cursor: pointer;
+  z-index: 999;
+}
+.movieRow__arrow.left {
+  left: 0;
+}
+.movieRow__arrow.right {
+  right: 0;
 }
 
 .moviePoster__img {
   margin: 0 0.3rem;
   max-width: 18rem;
+  width: 100%;
   border-radius: 0.3rem;
+  cursor: pointer;
+}
+.moviePoster__img:hover {
+  scale: 107%;
+  transition: transform 450ms;
 }
 
 .footer {
@@ -257,9 +294,15 @@ h1 {
 .footer svg:hover {
   scale: 105%;
 }
-.footer__links-list {
-  max-width: 50rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer__links-row {
+  width: 12rem;
+}
+.footer__links p {
+  margin: 1rem 0;
 }/*# sourceMappingURL=App.css.map */

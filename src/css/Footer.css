@@ -14,9 +14,15 @@
 .footer svg:hover {
   scale: 105%;
 }
-.footer__links-list {
-  max-width: 50rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.footer__links-row {
+  width: 12rem;
+}
+.footer__links p {
+  margin: 1rem 0;
 }/*# sourceMappingURL=Footer.css.map */

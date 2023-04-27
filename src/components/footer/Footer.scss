@@ -17,10 +17,18 @@
         }
     }
 
-    &__links-list {
-        max-width: 50rem;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-        grid-template-rows: repeat(3, 1fr); 
-        gap: 10px;
+    &__links {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+
+        &-row {
+            width: 12rem;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
     }
 }
