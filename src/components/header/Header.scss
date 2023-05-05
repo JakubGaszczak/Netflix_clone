@@ -6,6 +6,7 @@
     padding-top: 0;
 
     background-image: linear-gradient(to bottom, rgb(0, 0, 0, 1), rgba(255, 255, 255, 0));
+    z-index: 999999;
 
     .header__nav {
         display: flex;

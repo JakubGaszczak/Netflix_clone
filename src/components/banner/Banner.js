@@ -29,6 +29,7 @@ function Banner() {
         backgroundSize: "cover",
         backgroundPosition: "center center"
         }} 
+        id="banner"
         className='banner section'>
         <h1 className='banner__title'>
             {movie.name}

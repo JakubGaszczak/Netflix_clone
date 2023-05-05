@@ -1,21 +1,22 @@
 import "./css/App.css";
+// import requests from './API/request'
 
-import Banner from "./components/banner/Banner";
-import Header from "./components/header/Header";
-import LoginRegister from "./components/loginRegister/LoginRegister";
-
-import requests from './API/request'
-import MovieRow from "./components/movieRow/MovieRow";
-import Footer from "./components/footer/Footer";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+// import Banner from "./components/banner/Banner";
+// import Header from "./components/header/Header";
+// import MovieRow from "./components/movieRow/MovieRow";
+// import Footer from "./components/footer/Footer";
 
 
 function App() {
   return (
     <div className="app">
 
-        {/* <LoginRegister /> */}
+        {/* <Login /> */}
+        <Register />
 
-        <Header />
+        {/* <Header />
         <main>
           <Banner />
 
@@ -27,7 +28,7 @@ function App() {
           <MovieRow title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
           <MovieRow title="Documentaries" fetchUrl={requests.fetchDocumentariesMovies} />
         </main>
-        <Footer />
+        <Footer /> */}
 
     </div>
   );

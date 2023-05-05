@@ -16,13 +16,20 @@
 }
 .footer__links {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 .footer__links-row {
   width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .footer__links p {
   margin: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  .footer__links {
+    gap: 1rem;
+  }
 }/*# sourceMappingURL=Footer.css.map */

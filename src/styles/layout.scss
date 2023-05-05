@@ -1,6 +1,10 @@
 .section {
     padding: 3rem 3.5rem; 
 
+    @media screen and (max-width: 576px) {
+        padding: 1.5rem;
+    }
+
     &--header {
         padding: 0rem 3rem;
 
@@ -10,10 +14,11 @@
     }
 
     &--rows {
-        padding: 1.3rem 3rem;
+        padding: 1.3rem 1rem 1.3rem 3rem; 
 
         @media screen and (max-width: 768px) {
             padding: 1rem;
+            padding-right: 0;
         }
     }
 

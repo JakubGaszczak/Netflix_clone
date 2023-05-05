@@ -47,6 +47,7 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll)
 
+
   return (
     <header className={isScrolling ? "section--header header header__black" : "section--header header"} id='header'>
 
@@ -57,12 +58,12 @@ function Header() {
                     <p className='flex--center'>Przeglądaj <IoMdArrowDropdown /></p>   
                 </div>
                 <ul style={showNav ? {display: "none"} : {display: "flex"}} className={toggleResize ?  "header__mobile-list" : "header__list flex--center"}>
-                    <li>Strona główna</li>
-                    <li>Seriale i programy</li>
-                    <li>Filmy</li>
-                    <li>Nowe i popularne</li>
-                    <li>Moja Lista</li>
-                    <li>Przeglądaj wg języka</li>
+                    <li><a href="#banner">Strona główna</a></li>
+                    <li><a href='Action Movies'>Action</a></li>
+                    <li><a href='Comedy Movies'>Comedy</a></li>
+                    <li><a href='Horror Movies'>Horror</a></li>
+                    <li><a href='Romance Movies'>Romance</a></li>
+                    <li><a href='Documentaries'>Documentaries</a></li>
                 </ul>
             </div>
 

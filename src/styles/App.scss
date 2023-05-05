@@ -3,6 +3,9 @@
 @import "./base.scss";
 @import "./layout.scss";
 
+
+@import "../components/login/Login.scss";
+@import "../components/register/Register.scss";
 @import "../components/header/Header.scss";
 @import "../components/banner/Banner.scss";
 @import "../components/movieRow/MovieRow.scss";

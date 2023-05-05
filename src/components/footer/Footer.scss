@@ -19,16 +19,22 @@
 
     &__links {
         display: flex;
-        justify-content: center;
-        gap: 4rem;
+        gap: 3rem;
         flex-wrap: wrap;
 
         &-row {
             width: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         p {
             margin: 1rem 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            gap: 1rem;
         }
     }
 }

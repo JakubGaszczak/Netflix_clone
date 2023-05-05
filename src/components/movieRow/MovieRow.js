@@ -49,8 +49,6 @@ function MovieRow({ fetchUrl, title }) {
     
     const handleClick = (direction) => {
 
-        // checkScreenWidth()
-
         if (!isClicked) {
 
             setIsClicked(true)

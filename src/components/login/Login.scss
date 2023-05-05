@@ -1,0 +1,60 @@
+.login {
+    background-image: url("../assets/login background.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+
+    &__logo {
+        position: absolute;
+        width: 10rem;
+        top: .6rem;
+        left: 1.2rem;
+
+        cursor: pointer;
+    }
+
+    &__form {
+        flex-direction: column;
+        max-width: 21rem;
+        width: 100%;
+        padding: 2.5rem;
+
+        border-radius: .3rem;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        padding: .7rem 1rem;
+        margin: .3rem 0;
+
+        border-radius: .2rem;
+        background-color: rgb(54, 54, 54);
+        color: rgb(224, 224, 224);
+        border: none;
+    }
+
+    &__button-signin {
+        margin-top: 2rem;
+
+        font-size: 1rem;
+        background-color: red;
+        color: white;
+    }
+
+    &__button-signup {
+        margin-top: 5rem;
+
+        text-align: start;
+        font-size: .9rem;
+        border: none;
+        background: none;
+        color: white;
+        cursor: pointer;
+    }
+}
+

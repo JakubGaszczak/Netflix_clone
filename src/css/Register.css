@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+.register {
+  background-image: url("../assets/login background.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+}
+.register__logo {
+  position: absolute;
+  top: 0.6rem;
+  left: 1.2rem;
+  width: 10rem;
+  cursor: pointer;
+}
+.register__button-signin {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  font-size: 1rem;
+  background-color: red;
+  color: white;
+}
+.register__content {
+  max-width: 57rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+.register__title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.register__title h3 {
+  font-weight: 400;
+}
+.register__form {
+  flex-direction: column;
+  gap: 1rem;
+}
+.register__form input {
+  max-width: 70%;
+  width: 100%;
+  height: 2rem;
+  padding-left: 2rem;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+.register__button-getstarted {
+  width: 35%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=Register.css.map */

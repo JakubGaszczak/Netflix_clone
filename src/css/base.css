@@ -9,6 +9,16 @@ input {
   font-size: 0.9rem;
 }
 
+a {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  scale: 105%;
+}
+
 ul {
   list-style: none;
   font-size: 0.9rem;
@@ -23,7 +33,11 @@ li:hover {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 5.4rem;
+}
+
+button {
+  font-size: 1.4rem;
 }
 
 .flex {
@@ -49,4 +63,43 @@ h1 {
 .button--login {
   background-color: red;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  button {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  button {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=base.css.map */
