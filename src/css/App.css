@@ -3,10 +3,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,19 +69,31 @@ button {
 }
 
 .button {
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.4rem;
   border-radius: 0.2rem;
-  font-weight: 600;
   border: none;
   cursor: pointer;
 }
-.button--login {
+.button--red {
+  padding: 0.5rem 1.4rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  border: none;
   background-color: red;
   color: white;
+  cursor: pointer;
+}
+.button--white {
+  font-size: 1.1rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .button {
-    padding: 0.3rem 0.8rem;
+  .button, .button--red, .button--white {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -174,18 +191,12 @@ button {
 }
 .login__button-signin {
   margin-top: 2rem;
-  font-size: 1rem;
-  background-color: red;
-  color: white;
+  font-size: 0.9rem;
 }
 .login__button-signup {
   margin-top: 5rem;
   text-align: start;
   font-size: 0.9rem;
-  border: none;
-  background: none;
-  color: white;
-  cursor: pointer;
 }
 
 .register {
@@ -206,9 +217,6 @@ button {
   position: absolute;
   top: 3rem;
   right: 3rem;
-  font-size: 1rem;
-  background-color: red;
-  color: white;
 }
 .register__content {
   max-width: 57rem;
@@ -239,12 +247,6 @@ button {
   width: 35%;
   height: 2.5rem;
   margin-top: 1rem;
-  font-weight: 600;
-  border-radius: 0.2rem;
-  border: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
 }
 
 .header {
@@ -272,7 +274,7 @@ button {
 .header__leftSide .header__mobile-toggle {
   position: relative;
   display: none;
-  margin: 0 1rem;
+  margin-left: 0.4rem;
   font-size: 0.9rem;
   color: white;
 }
@@ -346,6 +348,14 @@ button {
   height: 2.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+.header__rightSide .header__button-signin {
+  margin: 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .header__rightSide .header__button-signin {
+    margin: 0 0.3rem;
+  }
 }
 
 /* hide serachbar */

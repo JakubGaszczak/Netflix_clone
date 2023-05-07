@@ -70,7 +70,7 @@ function MovieRow({ fetchUrl, title }) {
     }
 
   return (
-    <div className='movieRow section--rows'>
+    <div id='movieRow' className='movieRow section--rows'>
         <h3 className='movieRow__title'>{title}</h3>
         <div className='movieRow__wrapper'>
                 <button disabled={!isClicked}><IoIosArrowBack className='movieRow__arrow left' onClick={() => handleClick("left")}  /></button>

@@ -8,7 +8,7 @@ function Register() {
     <div className='register flex--center'>
         <header className='register__header'>
             <img className='register__logo' src={logo} alt="logo" />
-            <button className='button register__button-signin'>Sign In</button>
+            <button className='button--red register__button-signin'>Sign In</button>
         </header>
 
         <main className='register__content'>
@@ -23,7 +23,7 @@ function Register() {
                 <input className='register__input-email' type="email" id='email' placeholder='Email address' />
                 <input className='register__input-password' type="password" id="password" placeholder='Password' />
                 <input className='register__input-password2' type="password" id="password2" placeholder='Confirm password' />
-                <button className='register__button-getstarted flex--center'>
+                <button className='button--red register__button-getstarted flex--center'>
                     Get Started 
                     <IoIosArrowForward />
                     </button>

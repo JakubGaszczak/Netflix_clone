@@ -8,7 +8,7 @@ import logo from "../../assets/logo.png"
 import avatar from "../../assets/avatar.png"
 
 
-function Header() {
+function Header({ setCategory }) {
 
     const [showInput, setShowInput] = useState(false)
     const [showNav, setShowNav] = useState(false)
@@ -28,11 +28,12 @@ function Header() {
 
     useEffect(() => {
         window.addEventListener("resize", handleResize)
+        handleResize()
 
         return () => {
             window.removeEventListener('resize', handleResize);
         }
-    })
+    }, [])
 
 
     const handleScroll = () => {
@@ -47,6 +48,10 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll)
 
+    const changeCategory = category => {
+        setCategory(category)
+    }
+
 
   return (
     <header className={isScrolling ? "section--header header header__black" : "section--header header"} id='header'>
@@ -58,21 +63,23 @@ function Header() {
                     <p className='flex--center'>Przeglądaj <IoMdArrowDropdown /></p>   
                 </div>
                 <ul style={showNav ? {display: "none"} : {display: "flex"}} className={toggleResize ?  "header__mobile-list" : "header__list flex--center"}>
-                    <li><a href="#banner">Strona główna</a></li>
-                    <li><a href='Action Movies'>Action</a></li>
-                    <li><a href='Comedy Movies'>Comedy</a></li>
-                    <li><a href='Horror Movies'>Horror</a></li>
-                    <li><a href='Romance Movies'>Romance</a></li>
-                    <li><a href='Documentaries'>Documentaries</a></li>
+                    <li><a onClick={() => changeCategory("all")} href="#">Strona główna</a></li>
+                    <li><a onClick={() => changeCategory("action")} href="#movieRow" >Action</a></li>
+                    <li><a onClick={() => changeCategory("comedy")} href="#movieRow" >Comedy</a></li>
+                    <li><a onClick={() => changeCategory("horror")} href="#movieRow" >Horror</a></li>
+                    <li><a onClick={() => changeCategory("romance")} href="#movieRow" >Romance</a></li>
+                    <li><a onClick={() => changeCategory("documentaries")} href="#movieRow" >Documentaries</a></li>
                 </ul>
             </div>
 
             <div className='header__rightSide flex--center'>
-                <div className='header__search flex--center'>
+                <button className='button--white header__button-signin'>Sign In</button>
+                <button className='button--red header__button-signup'>Sign Up</button>
+                {/* <div className='header__search flex--center'>
                     <input className={showInput ? "header__input" : "hideInput"} placeholder='Tytuł' />
                     <BiSearch onClick={() => setShowInput(showInput => !showInput)} className='header__searchbar' />
                 </div>
-                <img className='header__avatar' src={avatar} />
+                <img className='header__avatar' src={avatar} /> */}
 
             </div>
         </nav>

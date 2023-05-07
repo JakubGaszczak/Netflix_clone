@@ -24,7 +24,7 @@
 .header__leftSide .header__mobile-toggle {
   position: relative;
   display: none;
-  margin: 0 1rem;
+  margin-left: 0.4rem;
   font-size: 0.9rem;
   color: white;
 }
@@ -98,6 +98,14 @@
   height: 2.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+.header__rightSide .header__button-signin {
+  margin: 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .header__rightSide .header__button-signin {
+    margin: 0 0.3rem;
+  }
 }
 
 /* hide serachbar */

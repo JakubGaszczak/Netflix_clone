@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(10, 10, 10);
@@ -54,19 +58,31 @@ button {
 }
 
 .button {
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.4rem;
   border-radius: 0.2rem;
-  font-weight: 600;
   border: none;
   cursor: pointer;
 }
-.button--login {
+.button--red {
+  padding: 0.5rem 1.4rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  border: none;
   background-color: red;
   color: white;
+  cursor: pointer;
+}
+.button--white {
+  font-size: 1.1rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  .button {
-    padding: 0.3rem 0.8rem;
+  .button, .button--red, .button--white {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.7rem;
   }
 }
 

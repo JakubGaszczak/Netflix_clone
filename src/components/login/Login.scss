@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+
+
 .login {
     background-image: url("../assets/login background.jpg");
     background-size: cover;
@@ -40,21 +43,14 @@
 
     &__button-signin {
         margin-top: 2rem;
-
-        font-size: 1rem;
-        background-color: red;
-        color: white;
+        font-size: $font-size-small;
     }
 
     &__button-signup {
         margin-top: 5rem;
 
         text-align: start;
-        font-size: .9rem;
-        border: none;
-        background: none;
-        color: white;
-        cursor: pointer;
+        font-size: $font-size-small;
     }
 }
 
