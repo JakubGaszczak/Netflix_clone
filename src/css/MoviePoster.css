@@ -1,11 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+.moviePoster {
+  position: relative;
+  width: 18rem;
+  margin: 0 0.6rem;
+  transition: transform 0.2s ease;
+}
+.moviePoster:hover {
+  transform: scale(1.2);
+  z-index: 99;
+}
 .moviePoster__img {
-  margin: 0 0.3rem;
-  max-width: 18rem;
-  width: 100%;
+  width: 18rem;
+  height: 100%;
   border-radius: 0.3rem;
   cursor: pointer;
 }
-.moviePoster__img:hover {
-  scale: 107%;
-  transition: transform 450ms;
+.moviePoster__information {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  height: 65%;
+  padding: 0 1rem;
+  gap: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 0.3rem 0.3rem;
+  z-index: 99;
+}
+.moviePoster__information .moviePoster__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.moviePoster__information .moviePoster__date {
+  font-size: 0.7rem;
 }/*# sourceMappingURL=MoviePoster.css.map */

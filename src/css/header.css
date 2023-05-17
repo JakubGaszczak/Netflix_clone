@@ -107,6 +107,9 @@
     margin: 0 0.3rem;
   }
 }
+.header__rightSide .header__button-logout {
+  margin: 0 1rem;
+}
 
 /* hide serachbar */
 .hideInput {

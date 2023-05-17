@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "../../API/axios"
-import { IoIosArrowBack } from "react-icons/io"
-import { IoIosArrowForward } from "react-icons/io"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import MoviePoster from '../moviePoster/MoviePoster'
 
@@ -20,71 +21,72 @@ function MovieRow({ fetchUrl, title }) {
         fetchData()
     }, [fetchUrl])
 
-    const rowRef = useRef()
-    const [slideNumber, setSlideNumber] = useState(0)
-    const [isClicked, setIsClicked] = useState(false)
-
-    let numberOfSlides = 6
-
-
-    // const checkScreenWidth = () => {
-    //     let windowWidth = window.innerWidth
-
-    //     if (windowWidth !== window.innerWidth) {
-    //         windowWidth = window.innerWidth
-
-    //         if (windowWidth < 6000) {
-    //             numberOfSlides = 5
-    //         } else if (windowWidth === 4960) {
-    //             numberOfSlides = 4
-    //         } else if (windowWidth === 3768) {
-    //             numberOfSlides = 3
-    //         } else if (windowWidth === 2448) {
-    //             numberOfSlides = 2
-    //         }
-    //     }
-
-    // }
-
-    
-    const handleClick = (direction) => {
-
-        if (!isClicked) {
-
-            setIsClicked(true)
-            let distance = rowRef.current.getBoundingClientRect().x - 48
-                if (direction === "left" && slideNumber > 0) {
-                    rowRef.current.style.transform = `translateX(${297.6 + distance}px)`
-                    setSlideNumber(slideNumber - 1)
-                }
-                if (direction === "right" && slideNumber < (movies.length - numberOfSlides)) {
-                    rowRef.current.style.transform = `translateX(${-297.6 + distance}px)`
-                    setSlideNumber(slideNumber + 1)
-                } 
-                
-                setTimeout(() => {
-                    setIsClicked(false);
-                }, 1000);
-        }
-
-    }
+    const settings = {
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1860,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 5,
+            }
+          },
+          {
+            breakpoint: 1560,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 980,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 620,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
 
   return (
     <div id='movieRow' className='movieRow section--rows'>
         <h3 className='movieRow__title'>{title}</h3>
         <div className='movieRow__wrapper'>
-                <button disabled={!isClicked}><IoIosArrowBack className='movieRow__arrow left' onClick={() => handleClick("left")}  /></button>
-                <div className='movieRow__row' ref={rowRef}>
-                    {movies.map((movie, key) => 
-                        (movie.backdrop_path) && (
-                            <MoviePoster movieTitle={movie.title} movieImg={movie.backdrop_path}  key={key} />
-                        )     
-                    )}
-                </div>
-                <button disabled={!isClicked}><IoIosArrowForward className='movieRow__arrow right' onClick={() => handleClick("right")} /></button>
+                <Slider {...settings} className='movieRow__row'>
+                      {movies.map((movie, key) => 
+                          (movie.backdrop_path) && (
+                              <MoviePoster
+                                  movieDate={movie.release_date}
+                                  movieTitle={movie.title} 
+                                  movieImg={movie.backdrop_path}  
+                                  key={key} />
+                      )
+                      )}
+                </Slider>
         </div>
     </div>
   )
 }
 
 export default MovieRow
+

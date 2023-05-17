@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -42,6 +46,9 @@ h1 {
 
 button {
   font-size: 1.4rem;
+}
+button:hover {
+  scale: 105%;
 }
 
 .flex {

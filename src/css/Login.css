@@ -11,6 +11,8 @@
   width: 10rem;
   top: 0.6rem;
   left: 1.2rem;
+  pointer-events: all;
+  z-index: 10;
   cursor: pointer;
 }
 .login__form {
@@ -40,4 +42,9 @@
   margin-top: 5rem;
   text-align: start;
   font-size: 0.9rem;
+}
+.login__error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }/*# sourceMappingURL=Login.css.map */

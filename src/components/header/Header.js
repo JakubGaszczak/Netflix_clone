@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import { UserAuth } from '../../context/AuthContext'
+import { Link, useNavigate } from "react-router-dom"
 
 import { BiSearch } from "react-icons/bi"
 import { IoMdArrowDropdown } from "react-icons/io"
@@ -9,6 +11,9 @@ import avatar from "../../assets/avatar.png"
 
 
 function Header({ setCategory }) {
+    const {user, logOut} = UserAuth()
+    const navigate  = useNavigate()
+    console.log(user)
 
     const [showInput, setShowInput] = useState(false)
     const [showNav, setShowNav] = useState(false)
@@ -52,13 +57,22 @@ function Header({ setCategory }) {
         setCategory(category)
     }
 
+    const handleLogout = async () => {
+        try {
+            await logOut()
+            navigate("/")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
   return (
     <header className={isScrolling ? "section--header header header__black" : "section--header header"} id='header'>
 
         <nav className='header__nav flex'>
             <div className='header__leftSide flex--center'>
-                <img className='header__logo' src={logo} alt="logo"/>
+                <a href='#'><img className='header__logo' src={logo} alt="logo"/></a>
                 <div onClick={() => setShowNav(showNav => !showNav)} className='header__mobile-toggle'>
                     <p className='flex--center'>Przeglądaj <IoMdArrowDropdown /></p>   
                 </div>
@@ -73,14 +87,25 @@ function Header({ setCategory }) {
             </div>
 
             <div className='header__rightSide flex--center'>
-                <button className='button--white header__button-signin'>Sign In</button>
-                <button className='button--red header__button-signup'>Sign Up</button>
-                {/* <div className='header__search flex--center'>
-                    <input className={showInput ? "header__input" : "hideInput"} placeholder='Tytuł' />
-                    <BiSearch onClick={() => setShowInput(showInput => !showInput)} className='header__searchbar' />
-                </div>
-                <img className='header__avatar' src={avatar} /> */}
-
+                {user?.email ?
+                <>
+                    <div className='header__search flex--center'>
+                        <input className={showInput ? "header__input" : "hideInput"} placeholder='Tytuł' />
+                        <BiSearch onClick={() => setShowInput(showInput => !showInput)} className='header__searchbar' />
+                    </div>
+                    <img className='header__avatar' src={avatar} alt='avatar' />
+                    <button onClick={handleLogout} className='button--white header__button-logout'>Log Out</button>
+                </>
+                :
+                <>
+                    <Link to="/login">
+                        <button className='button--white header__button-signin'>Sign In</button>
+                    </Link>
+                    <Link to="/register">
+                        <button className='button--red header__button-signup'>Sign Up</button>
+                    </Link>
+                </>
+                }
             </div>
         </nav>
     </header>

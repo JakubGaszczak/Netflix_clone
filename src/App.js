@@ -4,6 +4,8 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import HomeScreen from "./HomeScreen";
 
+import { AuthContextProvider } from "./context/AuthContext"
+
 import {
   BrowserRouter, 
   Routes,
@@ -15,6 +17,7 @@ function App() {
   return (
     <div className="app">
 
+      <AuthContextProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login />} />
@@ -22,6 +25,7 @@ function App() {
             <Route exact path="/" element={<HomeScreen />} />
           </Routes>
         </BrowserRouter>
+      </AuthContextProvider>
 
     </div>
   );

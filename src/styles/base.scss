@@ -2,6 +2,11 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
@@ -45,6 +50,10 @@ h1 {
 
 button {
     font-size: 1.4rem;
+
+    &:hover {
+        scale: 105%;
+    }
 }
 
 .flex {

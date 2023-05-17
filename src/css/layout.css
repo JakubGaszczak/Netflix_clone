@@ -15,11 +15,10 @@
   }
 }
 .section--rows {
-  padding: 1.3rem 1rem 1.3rem 3rem;
+  margin: 1.3rem 3rem 1.3rem 3rem;
 }
 @media screen and (max-width: 768px) {
   .section--rows {
-    padding: 1rem;
-    padding-right: 0;
+    margin: 2rem;
   }
 }/*# sourceMappingURL=layout.css.map */
