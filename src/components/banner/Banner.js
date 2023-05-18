@@ -23,9 +23,13 @@ function Banner() {
         fetchData()
     }, [])
 
+    const backdropImage = movie && movie.backdrop_path !== null 
+  ? `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`
+  : 'url("https://image.tmdb.org/t/p/original/kcHvkFlsodXu1TFgXuOT3OvJYnu.jpg")';
+
   return (
     <div style={{
-        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
+        backgroundImage: backdropImage,
         backgroundSize: "cover",
         backgroundPosition: "center center"
         }} 
@@ -54,3 +58,8 @@ function Banner() {
 }
 
 export default Banner
+
+
+
+
+

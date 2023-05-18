@@ -13,7 +13,6 @@ import avatar from "../../assets/avatar.png"
 function Header({ setCategory }) {
     const {user, logOut} = UserAuth()
     const navigate  = useNavigate()
-    console.log(user)
 
     const [showInput, setShowInput] = useState(false)
     const [showNav, setShowNav] = useState(false)
